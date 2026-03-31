@@ -12,7 +12,7 @@ using namespace std;
 //   cout<<"enter your fav no. bw 1 to 100: ";
 //   cin>>fav_number;
 //   cout<<"amazing that's my fav number too! ";
-//   cout<<"\nno really, " <<fav_number<<" is my fav number";
+//   cout<<"\n no really, " <<fav_number<<" is my fav number";
 
 //basic input and output using cin and cout
 //eg1
@@ -113,6 +113,82 @@ using namespace std;
 // return 0;
 // };
 
+//section -06 challenge(GPT)
+// Project: Personal Finance Tracker – Core Engine (v1)
+
+int main() {
+    
+    // Variables
+    double monthly_income = 0.0;
+    double rent = 0.0;
+    double groceries = 0.0;
+    double travel = 0.0;
+    double utilities = 0.0;
+    double other_expenses = 0.0;
+
+    // Constants
+    const double GROCERIES_BUDGET_LIMIT = 5000.0;
+    const double INFLATION_RATE = 0.06;        // 6% annual inflation
+    const int SAVING_MONTHS = 12;
+
+    // INPUT
+    cout << "Enter your monthly income (₹): ";
+    cin >> monthly_income;
+
+    cout << "Enter expense for Rent (₹): ";
+    cin >> rent;
+
+    cout << "Enter expense for Groceries (₹): ";
+    cin >> groceries;
+
+    cout << "Enter expense for Travel (₹): ";
+    cin >> travel;
+
+    cout << "Enter expense for Utilities (₹): ";
+    cin >> utilities;
+
+    cout << "Enter other expenses (₹): ";
+    cin >> other_expenses;
+
+    // Calculations
+    double total_expenses = rent + groceries + travel + utilities + other_expenses;
+    double remaining_balance = monthly_income - total_expenses;
+    double savings_rate = (monthly_income > 0) ? ((remaining_balance / monthly_income) * 100.0) : 0.0;
+
+    double monthly_saving_target = 25000.0;                    // example target
+    double inflation_adjusted_goal = monthly_saving_target * (1 + INFLATION_RATE);
+
+    // OUTPUT 
+    cout << "\n=== Monthly Finance Summary ===\n";
+    cout << "Total Income          : ₹" << monthly_income << endl;
+    cout << "Total Expenses        : ₹" << total_expenses << endl;
+    cout << "Remaining Balance     : ₹" << remaining_balance << endl;
+    cout << "Savings Rate          : " << savings_rate << "%\n\n";
+
+    cout << "Category Breakdown:\n";
+    cout << "- Rent        : ₹" << rent << endl;
+    cout << "- Groceries   : ₹" << groceries;
+    
+    if (groceries > GROCERIES_BUDGET_LIMIT) {
+        cout << " (Over budget by ₹" << (groceries - GROCERIES_BUDGET_LIMIT) << ")";
+    } else {
+        cout << " (Under budget by ₹" << (GROCERIES_BUDGET_LIMIT - groceries) << ")";
+    }
+    cout << endl;
+
+    cout << "- Travel      : ₹" << travel << endl;
+    cout << "- Utilities   : ₹" << utilities << endl;
+    cout << "- Others      : ₹" << other_expenses << endl;
+
+    cout << "\nMonthly Savings Target : ₹" << monthly_saving_target << endl;
+    cout << "Inflation-adjusted goal (6%): ₹" << inflation_adjusted_goal << endl;
+
+    if (remaining_balance < 0) {
+        cout << "\nWARNING: You are overspending this month!\n";
+    }
+
+    return 0;
+}
 // ARRAY
 // int main(){
 // int vowels2 [5] {};
@@ -161,7 +237,7 @@ using namespace std;
 // cout<<test_score[1];
 // cout<<test_score[2];
 // cout<<test_score[3]<<endl;
-// //vector syntax
+// //vector syntax  
 // cout<<test_score.at(0)<<endl;
 // cout<<test_score.at(2)<<endl;
 // cout<<"there are "<<test_score.size()<<" scores in the vector"<<endl;
@@ -1006,12 +1082,13 @@ using namespace std;
   // }
 
   //ill - 03 : 
-  void display(int *arr,int sentinel){
-    while(*arr!=sentinel){
-      cout<<* arr++<<" ";
-    }
-  } 
-  int main(){
-    int scores[]{100,282,373,929,-1};
-    display(scores,929);
-  }
+  // void display(int *arr,int sentinel){
+  //   while(*arr!=sentinel){
+  //     cout<<* arr++<<" ";
+  //   }
+  // } 
+  // int main(){
+  //   int scores[]{100,282,373,929,-1};
+  //   display(scores,929);
+  // }
+
