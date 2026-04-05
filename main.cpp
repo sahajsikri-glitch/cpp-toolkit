@@ -116,82 +116,83 @@ using namespace std;
 //section -06 challenge(GPT)
 // Project: Personal Finance Tracker – Core Engine (v1)
 
-int main() {
+// int main() {
     
-    // Variables
-    double monthly_income = 0.0;
-    double rent = 0.0;
-    double groceries = 0.0;
-    double travel = 0.0;
-    double utilities = 0.0;
-    double other_expenses = 0.0;
+//     // Variables
+//     double monthly_income = 0.0;
+//     double rent = 0.0;
+//     double groceries = 0.0;
+//     double travel = 0.0;
+//     double utilities = 0.0;
+//     double other_expenses = 0.0;
 
-    // Constants
-    const double GROCERIES_BUDGET_LIMIT = 5000.0;
-    const double INFLATION_RATE = 0.06;        // 6% annual inflation
-    const int SAVING_MONTHS = 12;
+//     // Constants
+//     const double GROCERIES_BUDGET_LIMIT = 5000.0;
+//     const double INFLATION_RATE = 0.06;        // 6% annual inflation
+//     const int SAVING_MONTHS = 12;
 
-    // INPUT
-    cout << "Enter your monthly income (₹): ";
-    cin >> monthly_income;
+//     // INPUT
+//     cout << "Enter your monthly income (₹): ";
+//     cin >> monthly_income;
 
-    cout << "Enter expense for Rent (₹): ";
-    cin >> rent;
+//     cout << "Enter expense for Rent (₹): ";
+//     cin >> rent;
 
-    cout << "Enter expense for Groceries (₹): ";
-    cin >> groceries;
+//     cout << "Enter expense for Groceries (₹): ";
+//     cin >> groceries;
 
-    cout << "Enter expense for Travel (₹): ";
-    cin >> travel;
+//     cout << "Enter expense for Travel (₹): ";
+//     cin >> travel;
 
-    cout << "Enter expense for Utilities (₹): ";
-    cin >> utilities;
+//     cout << "Enter expense for Utilities (₹): ";
+//     cin >> utilities;
 
-    cout << "Enter other expenses (₹): ";
-    cin >> other_expenses;
+//     cout << "Enter other expenses (₹): ";
+//     cin >> other_expenses;
 
-    // Calculations
-    double total_expenses = rent + groceries + travel + utilities + other_expenses;
-    double remaining_balance = monthly_income - total_expenses;
-    double savings_rate = (monthly_income > 0) ? ((remaining_balance / monthly_income) * 100.0) : 0.0;
+//     // Calculations
+//     double total_expenses = rent + groceries + travel + utilities + other_expenses;
+//     double remaining_balance = monthly_income - total_expenses;
+//     double savings_rate = (monthly_income > 0) ? ((remaining_balance / monthly_income) * 100.0) : 0.0;
 
-    double monthly_saving_target = 25000.0;                    // example target
-    double inflation_adjusted_goal = monthly_saving_target * (1 + INFLATION_RATE);
+//     double monthly_saving_target = 25000.0;                    // example target
+//     double inflation_adjusted_goal = monthly_saving_target * (1 + INFLATION_RATE);
 
-    // OUTPUT 
-    cout << "\n=== Monthly Finance Summary ===\n";
-    cout << "Total Income          : ₹" << monthly_income << endl;
-    cout << "Total Expenses        : ₹" << total_expenses << endl;
-    cout << "Remaining Balance     : ₹" << remaining_balance << endl;
-    cout << "Savings Rate          : " << savings_rate << "%\n\n";
+//     // OUTPUT 
+//     cout << "\n=== Monthly Finance Summary ===\n";
+//     cout << "Total Income          : ₹" << monthly_income << endl;
+//     cout << "Total Expenses        : ₹" << total_expenses << endl;
+//     cout << "Remaining Balance     : ₹" << remaining_balance << endl;
+//     cout << "Savings Rate          : " << savings_rate << "%\n\n";
 
-    cout << "Category Breakdown:\n";
-    cout << "- Rent        : ₹" << rent << endl;
-    cout << "- Groceries   : ₹" << groceries;
+//     cout << "Category Breakdown:\n";
+//     cout << "- Rent        : ₹" << rent << endl;
+//     cout << "- Groceries   : ₹" << groceries;
     
-    if (groceries > GROCERIES_BUDGET_LIMIT) {
-        cout << " (Over budget by ₹" << (groceries - GROCERIES_BUDGET_LIMIT) << ")";
-    } else {
-        cout << " (Under budget by ₹" << (GROCERIES_BUDGET_LIMIT - groceries) << ")";
-    }
-    cout << endl;
+//     if (groceries > GROCERIES_BUDGET_LIMIT) {
+//         cout << " (Over budget by ₹" << (groceries - GROCERIES_BUDGET_LIMIT) << ")";
+//     } else {
+//         cout << " (Under budget by ₹" << (GROCERIES_BUDGET_LIMIT - groceries) << ")";
+//     }
+//     cout << endl;
 
-    cout << "- Travel      : ₹" << travel << endl;
-    cout << "- Utilities   : ₹" << utilities << endl;
-    cout << "- Others      : ₹" << other_expenses << endl;
+//     cout << "- Travel      : ₹" << travel << endl;
+//     cout << "- Utilities   : ₹" << utilities << endl;
+//     cout << "- Others      : ₹" << other_expenses << endl;
 
-    cout << "\nMonthly Savings Target : ₹" << monthly_saving_target << endl;
-    cout << "Inflation-adjusted goal (6%): ₹" << inflation_adjusted_goal << endl;
+//     cout << "\nMonthly Savings Target : ₹" << monthly_saving_target << endl;
+//     cout << "Inflation-adjusted goal (6%): ₹" << inflation_adjusted_goal << endl;
 
-    if (remaining_balance < 0) {
-        cout << "\nWARNING: You are overspending this month!\n";
-    }
+//     if (remaining_balance < 0) {
+//         cout << "\nWARNING: You are overspending this month!\n";
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
 // ARRAY
 // int main(){
-// int vowels2 [5] {};
+// char vowels2 [5] {};
 // cout<<vowels2<<endl;
 // char vowels [5] {'a','e','i','o','u'};
 // cout<<"the first vowel is : "<<vowels[0]<<endl;
@@ -203,16 +204,17 @@ int main() {
 // cout<<hi_temp<<endl;
 // return 0;}
 
+//declaring and initializing array
+// int main(){
 // int a[5]={1,2,3,4,5};
 // for(int i=0;i<5;i++){
-
 //   cout<<" "<<a[i];
 // }
-// cout<<endl;
+// cout<<endl;}
 
 // //2-DIMAENSIONAL ARRAY
 // int main(){
-// int movie_rating[3][4]{{1,2,3,4},{4,5,6,7,},{6,7,8,9}};
+// int movie_rating[3][4]{{1,2,3,4},{4,5,6,7},{6,7,8,9}};
 // cout<<movie_rating<<endl;}
 
 //PRINTING A MATRIX
@@ -256,7 +258,24 @@ int main() {
 // cout<<movie_ratings[0][3]<<endl;
 // cout<<movie_ratings[2][2]<<endl;
 // }
-// //SECTION CHALLENGE
+
+// //DECLARING EMPTY 2 VECTORS
+// int main(){
+//   vector <int> vector1{3,5,2,4};
+//   vector <int> vector2{3,4,2,6,34};
+//   vector <vector<int>> vector_2d;
+//   vector_2d.push_back(vector1);
+//   vector_2d.push_back(vector2);
+//   cout<<vector_2d.at(0).at(0)<<" "<<vector_2d.at(0).at(1)<<endl;
+//   cout<<vector_2d.at(1).at(0)<<" "<<vector_2d.at(1).at(1)<<endl;
+//   vector1.at(0) = 1000;
+//   cout<<vector_2d.at(0).at(0)<<" "<<vector_2d.at(0).at(1)<<endl;
+//   cout<<vector_2d.at(1).at(0)<<" "<<vector_2d.at(1).at(0)<<endl;
+//   cout<<vector1.at(0);
+//   cout<<vector1.at(1);
+// }
+
+//SECTION CHALLENGE
 // int main(){
 // vector <int> vector1;
 // vector <int> vector2;
@@ -282,22 +301,40 @@ int main() {
 // cout<<vector_2d.at(0).at(1)<<endl;
 // cout<<vector_2d.at(1).at(0)<<endl;
 // cout<<vector_2d.at(1).at(1)<<endl;
-// cout<<vector1.at(0);
+// cout<<vector1.at(0)<<endl;
 // cout<<vector1.at(1);
 // return 0;
 // }
 
-// //DECLARING EMPTY 2 VECTORS
-// // vector <vector<int>> vector_2d;
-// // vector_2d.push_back(vector1);
-// // vector_2d.push_back(vector2);
-// // cout<<vector_2d.at(0).at(0)<<" "<<vector_2d.at(0).at(1)<<endl;
-// // cout<<vector_2d.at(1).at(0)<<" "<<vector_2d.at(1).at(1)<<endl;
-// // vector1.at(0) = 1000;
-// // cout<<vector_2d.at(0).at(0)<<" "<<vector_2d.at(0).at(1)<<endl;
-// // cout<<vector_2d.at(1).at(0)<<" "<<vector_2d.at(1).at(0)<<endl;
-// // cout<<vector1.at(0);
-// // cout<<vector1.at(1); 
+// SECTION - 07 CHALLENGE :
+// Project: Stock Portfolio Analyzer
+
+int main(){
+  //initializing and declaring stock companies
+  double reliance[3]{};
+  double tcs[3]{};
+  double hdfc_bank[3]{};
+
+  //taking input from users 
+  cout<<"add stocks : reliance           ";
+  cin>>reliance[0]>>reliance[1]>>reliance[2];
+  
+  cout<<"add stocks : tcs                ";
+  cin>>tcs[0]>>tcs[1]>>tcs[2];
+  
+  cout<<"add stocks : hdfc bank          ";
+  cin>>hdfc_bank[0]>>hdfc_bank[1]>>hdfc_bank[2];
+  
+  cout<<"=== Stock Portfolio Report ==="<<endl;
+  cout<<"Total Portfolio Value : ₹3,45,275.00";
+  cout<<"Overall Return        : +2.84%";
+  cout<<"\n Stock Details:";
+  cout<<"Ticker      Shares   Buy Price   Current    Gain/Loss    %"<<endl;
+  cout<<"RELIANCE    "<<reliance[0]<<"     "<<reliance[1]<<"     "<<reliance[2]<<"     "<<(reliance[2]-reliance[1])*reliance[0]<<"     "<<reliance[2]/reliance[1]*100<<endl;
+  cout<<"tcs    "<<tcs[0]<<"     "<<tcs[1]<<"     "<<tcs[2]<<"     "<<(tcs[2]-tcs[1])*tcs[0]<<"     "<<tcs[2]/tcs[1]*100<<endl;
+  cout<<"hdfc_bank    "<<hdfc_bank[0]<<"     "<<hdfc_bank[1]<<"     "<<hdfc_bank[2]<<"     "<<(hdfc_bank[2]-hdfc_bank[1])*hdfc_bank[0]<<"     "<<hdfc_bank[2]/hdfc_bank[1]*100<<endl;
+  return 0;
+}
 
 // // LOOPS (FOR / WHILE)
 // // 1)printing numbers from 75 to 50
