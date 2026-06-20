@@ -309,32 +309,32 @@ using namespace std;
 // SECTION - 07 CHALLENGE :
 // Project: Stock Portfolio Analyzer
 
-int main(){
-  //initializing and declaring stock companies
-  double reliance[3]{};
-  double tcs[3]{};
-  double hdfc_bank[3]{};
+// int main(){
+//   //initializing and declaring stock companies
+//   double reliance[3]{};
+//   double tcs[3]{};
+//   double hdfc_bank[3]{};
 
-  //taking input from users 
-  cout<<"add stocks : reliance           ";
-  cin>>reliance[0]>>reliance[1]>>reliance[2];
+//   //taking input from users 
+//   cout<<"add stocks : reliance           ";
+//   cin>>reliance[0]>>reliance[1]>>reliance[2];
   
-  cout<<"add stocks : tcs                ";
-  cin>>tcs[0]>>tcs[1]>>tcs[2];
+//   cout<<"add stocks : tcs                ";
+//   cin>>tcs[0]>>tcs[1]>>tcs[2];
   
-  cout<<"add stocks : hdfc bank          ";
-  cin>>hdfc_bank[0]>>hdfc_bank[1]>>hdfc_bank[2];
+//   cout<<"add stocks : hdfc bank          ";
+//   cin>>hdfc_bank[0]>>hdfc_bank[1]>>hdfc_bank[2];
   
-  cout<<"=== Stock Portfolio Report ==="<<endl;
-  cout<<"Total Portfolio Value : ₹3,45,275.00";
-  cout<<"Overall Return        : +2.84%";
-  cout<<"\n Stock Details:";
-  cout<<"Ticker      Shares   Buy Price   Current    Gain/Loss    %"<<endl;
-  cout<<"RELIANCE    "<<reliance[0]<<"     "<<reliance[1]<<"     "<<reliance[2]<<"     "<<(reliance[2]-reliance[1])*reliance[0]<<"     "<<reliance[2]/reliance[1]*100<<endl;
-  cout<<"tcs    "<<tcs[0]<<"     "<<tcs[1]<<"     "<<tcs[2]<<"     "<<(tcs[2]-tcs[1])*tcs[0]<<"     "<<tcs[2]/tcs[1]*100<<endl;
-  cout<<"hdfc_bank    "<<hdfc_bank[0]<<"     "<<hdfc_bank[1]<<"     "<<hdfc_bank[2]<<"     "<<(hdfc_bank[2]-hdfc_bank[1])*hdfc_bank[0]<<"     "<<hdfc_bank[2]/hdfc_bank[1]*100<<endl;
-  return 0;
-}
+//   cout<<"=== Stock Portfolio Report ==="<<endl;
+//   cout<<"Total Portfolio Value : ₹3,45,275.00";
+//   cout<<"Overall Return        : +2.84%";
+//   cout<<"\n Stock Details:";
+//   cout<<"Ticker      Shares   Buy Price   Current    Gain/Loss    %"<<endl;
+//   cout<<"RELIANCE    "<<reliance[0]<<"     "<<reliance[1]<<"     "<<reliance[2]<<"     "<<(reliance[2]-reliance[1])*reliance[0]<<"     "<<reliance[2]/reliance[1]*100<<endl;
+//   cout<<"tcs    "<<tcs[0]<<"     "<<tcs[1]<<"     "<<tcs[2]<<"     "<<(tcs[2]-tcs[1])*tcs[0]<<"     "<<tcs[2]/tcs[1]*100<<endl;
+//   cout<<"hdfc_bank    "<<hdfc_bank[0]<<"     "<<hdfc_bank[1]<<"     "<<hdfc_bank[2]<<"     "<<(hdfc_bank[2]-hdfc_bank[1])*hdfc_bank[0]<<"     "<<hdfc_bank[2]/hdfc_bank[1]*100<<endl;
+//   return 0;
+// }
 
 // // LOOPS (FOR / WHILE)
 // // 1)printing numbers from 75 to 50
@@ -669,26 +669,61 @@ int main(){
 //     }
 //   }
 // }
+//GOOD QUESTION :
+// que :
+// Given a vector of integers, determine how many integers are present before you see the value -99 . Note, it's possible -99  is not in the vector! If -99  is not in the vector then the result will be equal to the number of elements in the vector.
 
-// NSTED LOOPS
-// ILL 1
-// int main(){
-//   int num_items;
-//   cout<<"enter the num of items you wanna add in data : ";
-//   cin>>num_items;
-//   vector <int> data;
-//   for(int i{1};i<=num_items;i++){
-//     int data_item;
-//     cout<<"enter data items : ";
-//     cin>>data_item;
-//     data.push_back(data_item);
-//   }
-//   for(auto val: data){
-//     cout<<val<<endl;
-//     for(int i{1};i<=val;i++){
-//       if(i%5==0){
-//         cout<<"*";
-//       }
+// The final result should be stored in an integer variable named count .
+
+// Note that you the different vectors will be tested against your code. You do not need to declare the vector of integers. vec  is the name of the vector you should use.
+
+// You can find my solution by clicking on the solution.txt file on the left pane. But please make sure you give it a go yourself first, and only check the solution if you really get stuck.
+
+// SOL :
+// int count_numbers(const vector<int> &vec) {
+//     //---- WRITE YOUR CODE BELOW THIS LINE----
+//     int count{0};
+//     int i{0};
+    
+//      while (i< vec.size() && vec.at(i) != -99  ) {
+//         ++count;
+//         ++i;
+//     }
+//DO WHILE LOOP 
+// => the simple difference between do while and while is
+//  WHEN TO USE IS:
+//  just if you know there should be atleast one time that
+//  i've to perform this then go for do while
+
+//ILL-1
+ int main(){
+  char selection{};//always declare this outside the loop varna lawde
+  do
+  {
+    cout<<"1. your name is Sahaj"<<endl;
+    cout<<"2. your roll no. is 966"<<endl;
+    cout<<"3. your cgpa is 8"<<endl;
+    cout<<"4. Quit"<<endl;
+    cin>>selection;
+    if(selection =='1'){
+      cout<<" your name is Sahaj "<<endl;
+    }
+    else if(selection =='2'){
+      cout<<" your roll no. is 966 "<<endl;
+    }
+    else if(selection == '3'){
+      cout<<" your cgpa is 8 "<<endl;
+    }
+    else if (selection =='Q'|| selection == 'q'){
+      cout<<"goodbye "<<endl;
+    }
+    else{
+      cout<<"unknown option ... try again "<<endl;
+    }
+  } while (selection != 'q' && selection != 'Q');
+    cout<<endl;
+    return 0;
+  }
 //       else{
 //         cout<<"-";
 //       }
@@ -1129,3 +1164,72 @@ int main(){
   //   display(scores,929);
   // }
 
+  //section - 20 : STL 
+  // # 1/06/26
+
+  // introduction to iterators 
+  // #include <set>
+  // #include <map>
+  // #include <list>
+
+  // //illustration -01 :
+  // void test_case1(){
+  //   vector<int>vec {1,2,3,4,5};
+  //   auto it = vec.begin();
+  //    cout<<*it<<endl;
+
+  //    it++;
+  //    cout<<*it<<endl;
+
+  //    it+=2;
+  //    cout<<*it<<endl;
+
+  //    it=vec.end()-1;
+  //    cout<<*it<<endl;
+  // }
+
+  // //illustration -02 :
+  // void test_case2(){
+  //   vector <int> vec2 {1,2,3,4,5};
+  //   vector <int>::const_iterator it2 = vec2.begin();
+  //   // auto it2 = vec2.cbegin(); //OR
+
+  //   while (it2!=vec2.end())
+  //   {
+  //     cout<<*it2<<endl;
+  //     it2++;
+  //   }
+  // }
+
+  // //illustration -03 :
+  // void test_case3(){
+  //   vector <int> vec3 {1,2,3,4,5};
+  //   auto it3 = vec3.rbegin();
+  //   while(it3!=vec3.rend()){
+  //     cout<<*it3<<endl;
+  //     it3++;
+  //   }
+
+  //   list<string>name {"larry","moe","curly"};
+  //   // vector <string>::const_reverse_iterator it4 = name.begin();
+  //   auto it4 = name.crbegin();
+  //   cout<<*it4<<endl;
+    
+  //   it4++;
+  //   cout<<*it4<<endl;
+
+  //   map<string,string> fav {{"frank","cpp"},{"sahaj","engg"},{"teju","doctor"}};
+  //   auto it5 = fav.begin();
+  //   while(it5!=fav.end()){
+  //     cout<<it5->first<<" "<<it5->second<<endl;
+  //     it5++;
+  //   }
+  // }
+
+  // int main(){
+  //   test_case1();
+  //   cout<<"-----------------------------------------"<<endl;
+  //   test_case2();
+  //   cout<<"-----------------------------------------"<<endl;
+  //   test_case3();
+  // }
