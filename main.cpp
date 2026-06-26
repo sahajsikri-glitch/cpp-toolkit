@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <cstring>//for c style string functions
 #include <cctype>//for character based functions
 #include <cstdlib>//required for rand()
@@ -689,6 +690,13 @@ using namespace std;
 //         ++count;
 //         ++i;
 //     }
+
+//       else{
+//         cout<<"-";
+//       }
+//     }
+//     cout<<endl;
+//   }}
 //DO WHILE LOOP 
 // => the simple difference between do while and while is
 //  WHEN TO USE IS:
@@ -696,72 +704,162 @@ using namespace std;
 //  i've to perform this then go for do while
 
 //ILL-1
- int main(){
-  char selection{};//always declare this outside the loop varna lawde
-  do
-  {
-    cout<<"1. your name is Sahaj"<<endl;
-    cout<<"2. your roll no. is 966"<<endl;
-    cout<<"3. your cgpa is 8"<<endl;
-    cout<<"4. Quit"<<endl;
-    cin>>selection;
-    if(selection =='1'){
-      cout<<" your name is Sahaj "<<endl;
-    }
-    else if(selection =='2'){
-      cout<<" your roll no. is 966 "<<endl;
-    }
-    else if(selection == '3'){
-      cout<<" your cgpa is 8 "<<endl;
-    }
-    else if (selection =='Q'|| selection == 'q'){
-      cout<<"goodbye "<<endl;
-    }
-    else{
-      cout<<"unknown option ... try again "<<endl;
-    }
-  } while (selection != 'q' && selection != 'Q');
-    cout<<endl;
-    return 0;
-  }
-//       else{
-//         cout<<"-";
-//       }
+//  int main(){
+//   char selection{};//always declare this outside the loop varna lawde
+//   do
+//   {
+//     cout<<"1. your name is Sahaj"<<endl;
+//     cout<<"2. your roll no. is 966"<<endl;
+//     cout<<"3. your cgpa is 8"<<endl;
+//     cout<<"4. Quit"<<endl;
+//     cin>>selection;
+//     if(selection =='1'){
+//       cout<<" your name is Sahaj "<<endl;
 //     }
+//     else if(selection =='2'){
+//       cout<<" your roll no. is 966 "<<endl;
+//     }
+//     else if(selection == '3'){
+//       cout<<" your cgpa is 8 "<<endl;
+//     }
+//     else if (selection =='Q'|| selection == 'q'){
+//       cout<<"goodbye "<<endl;
+//     }
+//     else{
+//       cout<<"unknown option ... try again "<<endl;
+//     }
+//   } while (selection != 'q' && selection != 'Q');
 //     cout<<endl;
-//   }}
+//     return 0;
+//   }
+
+  // SECTION - 09 :
+  // int main(){
+  //   vector <int> vec{1,4,2,8,3};
+  //   char alph;
+  //   while(true){
+  //      int count{0};
+  //      int n = vec.size()-1;
+  //      int num;
+  //     cout<<"enter you choice: "<<endl;
+  //     cout<<"a or A - add a number in your list"<<endl;
+  //     cout<<"p or P - print numbers in your list"<<endl;
+  //     cout<<"m o M - gives median of your list"<<endl;
+  //     cout<<"s or S - gives smallest number of your list"<<endl;
+  //     cout<<"l or L - gives largest number of your list"<<endl;
+  //     cout<<"q or Q - quit / goodbye!"<<endl;
+
+  //     cin>>alph;
+  //     switch (alph){
+  //       case 'p':
+  //       case 'P':
+  //       for(int i =0;i<vec.size();i++){
+  //         cout<<vec.at(i);
+  //       }
+  //       break;
+
+  //       case 'a':
+  //       case 'A':
+  //       cout<<"enter the number you want to add in list: ";
+  //       cin>>num;
+  //       vec.push_back(num);
+  //       break;
+
+  //       case 'm':
+  //       case 'M':
+  //       for(int i = 0 ;i<vec.size();i++){
+  //         count+=(vec.at(i));
+  //       }
+  //       cout<<(count/vec.size());
+  //       break;
+
+  //       case 's':
+  //       case 'S':
+  //       sort(vec.begin(),vec.end());
+  //       cout<<vec.at(0);
+  //       break;
+
+  //       case 'l':
+  //       case 'L':
+  //       sort(vec.begin(),vec.end());
+  //       cout<<vec.at(n);
+  //       break;
+
+  //       case 'q':
+  //       case 'Q':
+  //       cout<<"goodbye";
+  //       break;
+
+  //       default:
+  //       cout<<"invalid num ; give any valid num again ! ";
+  //       break;
+  //     }
+  //     if(alph == 'q' || alph == 'Q')
+  //     break;
+  //   }
+  // }
+
+  // quiz que 
+
+  // Q1 .
+  // int main(){
+  //   int favorite;
+  //   cout << "Enter your favorite number: ";
+  //   cin >> favorite;
+  //   if (favorite == 13)
+  //   cout << "That my favorite number too!" << endl;
+  //   cout << "That's amazing!" << endl;
+  //   cout << "Great minds think alike!" << endl;
+
+  //   // ## amazing concept 
+  //   // if true : then all of statements will be displayed
+  //   // if flase: theen the last 2 statements
+
+  // }
+
+  // Q2 . 
+  // int main(){
+  //   int num = 10;
+  //   while (num >= 1)
+  //   cout << num << " ";
+  //   // it will only consdier 1 statement 
+  //   // so, its an infinite loop 
+  //   num--;
+  // }
+
 //section 10 : string
 
-// STRING STYLE 
+//  C-STRING STYLE 
 // int main(){
 //   char first_name[20]{};
 //   char last_name[20]{};
 //   char full_name[50]{};
 //   char temp[50]{};
   
-//   // //TAKING FIRST AND LAST NAME OF USER
-//   // cout<<"please enter your first name";
-//   // cin>>first_name;
-//   // cout<<"please enter your last name";
-//   // cin>>last_name;
-//   // cout<<"----------------------------"<<endl;
+//   //TAKING FIRST AND LAST NAME OF USER
+//   cout<<"please enter your first name";
+//   cin>>first_name;
+//   cout<<"please enter your last name";
+//   cin>>last_name;
+//   cout<<"----------------------------"<<endl;
 
-//   // cout<<first_name<<strlen(first_name)<<"characters";
-//   // cout<<last_name<<strlen(last_name)<<"characters";
+//   cout<<first_name<<strlen(first_name)<<"characters"<<endl;
+//   cout<<last_name<<strlen(last_name)<<"characters"<<endl;
 
-//   // //TAKING FULL NAME USING COUT
+//   //TAKING FULL NAME USING COUT
 //   // cout<<"enter your full name";
 //   // cin>>full_name;//ERROR : not appropriate only take first string
 //   // cout<<"your full name is"<<full_name<<endl;
 //   // cout<<"----------------------------"<<endl;
-
 //   //TAKING FULL NAME USING GETLINE
-  // cout<<"enter your full name : ";
-  // cin.getline(full_name,50);
-  // cout<<"your full name is "<<full_name<<endl;
-  // cout<<"----------------------------"<<endl;
-  //COPYING STRINGS 
+//   cin.ignore(); //this is important to use with cin.getline
+//   cout<<"enter your full name : ";
+//   cin.getline(full_name,50);
+//   cout<<"your full name is "<<full_name<<endl;
+//   cout<<"----------------------------"<<endl;
+//   // COPYING STRINGS 
 //   strcpy(temp,full_name);
+//   cout<<temp;
 
 //   //CAPITIALIZING LETTERS OF STRING
 //   for (size_t i{0};i<strlen(full_name);i++){
@@ -784,28 +882,31 @@ using namespace std;
 // // vice and versa
 // }
 
-// WORKING WITH STRINGS
+// C++ STRINGS (INDEXING YES)
 // int main(){
 //   //initializing and declaring
-// // string s0;
-// // string s1{"apple"};
-// // string s2{s1,0,3};//app
+// string s0;
+// string s1{"apple"};
+// string s2{s1,0,3};//app (0 se n-1)
+// cout<<s2;
 
 // //no garbage
-// // cout<<s0<<endl;//empty(nothing)
-// // cout<<s0.length()<<endl;//nothing
+// cout<<s0<<endl;//empty(nothing)
+// cout<<s0.length()<<endl;//nothing
 
-// // s1.at(0) = 'B';
-// // cout<<s1<<endl;
+// s1.at(0) = 'B';
+// cout<<s1<<endl;
+// // you can print a string together its not like array !
 
 // //looping
-// // for(size_t i{0};i<s1.length();i++){
-// //   cout<<s1.at(i);
-// // }
+// for(size_t i{0};i<s1.length();i++){
+//   cout<<s1.at(i);
+// }
 
-// string s1{"this is test"};
+// string s7{"this is test"};
 // //erase
-// // s1.erase(0,5);
+// s7.erase(0,5);
+// cout<<s7;//vahi same 0 se n-1 tak erase
 
 // //find
 // string word;
@@ -813,13 +914,42 @@ using namespace std;
 // cin>>word;
 
 // int position = s1.find(word);
-// if(position != string::npos){
+// if(position != string::npos){//string::npos ye cpp tab deta hai
+//   //  when finding word doesnt exist
+//   // (if position is not equal to doesnt exist ) or
+//   // (if word is not equal to doesnt exist)
 //   cout<<"found at pos : "<<position;
 // }
 // else{
 //   cout<<"sorry couldnt found";
 // }
 // }
+
+//section -10 CHALLENGE QUE :
+// SUBSTITUTION CIPHER
+int main(){
+  string alphabet{"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+  string key{"XHIDHASFASOAHASODHASOIDHASIOHIAOSSAODAHDAIODHIASDHIS"};
+  string secret_message{};
+  cout<<"enter your secret message: ";
+
+  getline(cin,secret_message);
+
+  string encrypted_message{};
+  for(auto c: secret_message){
+    size_t position = alphabet.find(c);
+    cout<<position;
+    if(position !=string::npos){
+      char new_char {key.at(position)};
+      encrypted_message+=new_char;
+    }
+    else{
+      encrypted_message+=c;
+    }
+  }
+  cout<<encrypted_message;
+  return 0;
+}
 
 // SECTION 11
 
