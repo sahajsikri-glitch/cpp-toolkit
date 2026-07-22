@@ -65,7 +65,7 @@ using namespace std;
 // long people_in_florida {24345454};
 // cout<<people_in_florida<<endl;
 
-// long long people_on_earth {34398479287482};
+// long long int people_on_earth {34398479287482};
 // cout<<people_on_earth<<endl;
 
 // // **********************************************************
@@ -191,7 +191,9 @@ using namespace std;
 //     return 0;
 // }
 
+// SECTION-06 :
 // ARRAY
+
 // int main(){
 // char vowels2 [5] {};
 // cout<<vowels2<<endl;
@@ -337,81 +339,8 @@ using namespace std;
 //   return 0;
 // }
 
-// // LOOPS (FOR / WHILE)
-// // 1)printing numbers from 75 to 50
-// // for (int i =75;i>=50;i=i-5){
-// //   cout<<"numbers are "<<i;
-// // }
-// // int i{75};
-// // while(i>50){
-// //   cout<<"numbers are "<<i<<endl;
-// //   i=i-5;
-// // }
-
-// // // 2)FIBINOCCI[1 1 2 3 5 8 13 21]
-// // int next;
-// // int n1=1,n2 = 1;
-// // cout<<n1<<n2;
-// // for(int i=1;i<=6;i++){
-// //   next=n1+n2;
-// //   n1 = n2;
-// //   n2=next;
-// //   cout<<next;
-// // }
-
-// // while()
-
-// //SUM OF POSITIVE INT
-// // int num,sum=0;
-// // cout<<"the integers are: ";
-// // do{
-// //   cin>>num;
-// //   if(num>0){
-// //     sum+=num;
-// //   }
-// // }
-// //   while (num!=0);
-
-// //   cout<<"the sum of positive number integers: "<<sum;
-
-// // PATTERN MAKING
-// int main(){
-// * 
-// * * 
-// * * * 
-// * * * * 
-// * * * * *
-// int n;
-// cin>> n;
-// for(int i = 1;i<=n;i++){
-//   for(int j=1;j<=i;j++){
-//     cout<<"*";
-//   }
-//   cout<<endl;
-// }
-
-// * * * * *
-// * * * *
-// * * *
-// * *
-// *
-// int n;
-// cin>>n;
-// for(int i=1;i<=n;i++){
-//   for(int j=n;j>=1;j--){
-//     cout<<"*";
-//   }
-//   cout<<endl;
-// }
-// }
-
-// for(int i=1;i<=5;i++){
-//   cout<<endl;
-// }
-// for(int j=1;j<=i;j++){
-//   cout<<" "<<"*";
-// }
-
+//SECTION - 08 :
+// STATEMENTS AND OPERATORS 
 // //ARITHMETIC OPERATOR 
 // // int num1{100};
 // // int num2{200};
@@ -430,7 +359,7 @@ using namespace std;
 //   return a+b;
 // }
 // int main(){
-//   int X,Y,result;
+//   int X,Y,result;// IMPORTANT
 //   cin>>X>>Y;
 //   result = sum(X,Y);
 // cout<<endl<<result;
@@ -449,6 +378,10 @@ using namespace std;
 //   total = num1+num2+num3;
 //   double average{0.0};
 //   average =static_cast<double> (total) / count;
+// The static_cast operator provides a safer
+//  and more explicit way to perform type conversions in C++
+//  , helping improve code readability and type safety
+
 //   // average = (double)total/count; //OLD STYLE
   
 //   cout<<"the 3 numbers were"<<num1<<" "<<num2<<" "<<num3<<endl;
@@ -470,6 +403,7 @@ using namespace std;
 //   cout<<"comparison result (not equal) "<<notequal_num<<endl;
 //   return 0;
 // }
+
 //GOOD QUESTION
 // Coding Exercise 9: 
 // Logical Operators and Operator Precedence - Can you work?
@@ -517,7 +451,87 @@ using namespace std;
 //   return 0;
 // }
 
+// SECTION - 09 :
+// CONTROLLING PROGRAM FLOW
+
+// // LOOPS (FOR)
+// // 1)printing numbers from 75 to 50
+// // for (int i =75;i>=50;i=i-5){
+// //   cout<<"numbers are "<<i;
+// // }
+// // int i{75};
+// // while(i>50){
+// //   cout<<"numbers are "<<i<<endl;
+// //   i=i-5;
+// // }
+
+// // // 2)FIBINOCCI[1 1 2 3 5 8 13 21]
+// // int next;
+// // int n1=1,n2 = 1;
+// // cout<<n1<<n2;
+// // for(int i=1;i<=6;i++){
+// //   next=n1+n2;
+// //   n1 = n2;
+// //   n2=next;
+// //   cout<<next;
+// // }
+
+// // while()
+
+// //SUM OF POSITIVE INT
+// // int num,sum=0;
+// // cout<<"the integers are: ";
+// // do{
+// //   cin>>num;
+// //   if(num>0){
+// //     sum+=num;
+// //   }
+// // }
+// //   while (num!=0);
+
+// //   cout<<"the sum of positive number integers: "<<sum;
+
+// // PATTERN MAKING
+
+// int main(){
+// * 
+// * * 
+// * * * 
+// * * * * 
+// * * * * *
+// int n;
+// cin>> n;
+// for(int i = 1;i<=n;i++){
+//   for(int j=1;j<=i;j++){
+//     cout<<"*";
+//   }
+//   cout<<endl;
+// }
+
+// * * * * *
+// * * * *
+// * * *
+// * *
+// *
+// int n;
+// cin>>n;
+// for(int i=1;i<=n;i++){
+//   for(int j=n;j>=1;j--){
+//     cout<<"*";
+//   }
+//   cout<<endl;
+// }
+// }
+
+// for(int i=1;i<=5;i++){
+//   cout<<endl;
+// }
+// for(int j=1;j<=i;j++){
+//   cout<<" "<<"*";
+// }
+
 // NESTED IF STATEMENT
+
 //1st illustration
 // int main(){
 // int score{};
@@ -587,6 +601,7 @@ using namespace std;
 //   }
 
 // CONDITIONAL OPERATOR
+
 // illustration - 1
 // int main(){
 //   int num;
@@ -672,13 +687,17 @@ using namespace std;
 // }
 //GOOD QUESTION :
 // que :
-// Given a vector of integers, determine how many integers are present before you see the value -99 . Note, it's possible -99  is not in the vector! If -99  is not in the vector then the result will be equal to the number of elements in the vector.
-
-// The final result should be stored in an integer variable named count .
-
-// Note that you the different vectors will be tested against your code. You do not need to declare the vector of integers. vec  is the name of the vector you should use.
-
-// You can find my solution by clicking on the solution.txt file on the left pane. But please make sure you give it a go yourself first, and only check the solution if you really get stuck.
+// Given a vector of integers, determine how many integers are present
+// before you see the value -99 . Note, it's possible -99
+// is not in the vector! If -99  is not in the vector then
+// the result will be equal to the number of elements in the vector.
+// final result should be stored in an integer variable named count.
+// Note that you the different vectors will be tested against your code.
+// You do not need to declare the vector of integers. 
+// vec  is the name of the vector you should use.
+// You can find my solution by clicking on the solution.txt file
+// on the left pane. But please make sure you give it a go yourself
+// first, and only check the solution if you really get stuck.
 
 // SOL :
 // int count_numbers(const vector<int> &vec) {
@@ -697,6 +716,7 @@ using namespace std;
 //     }
 //     cout<<endl;
 //   }}
+
 //DO WHILE LOOP 
 // => the simple difference between do while and while is
 //  WHEN TO USE IS:
@@ -733,7 +753,6 @@ using namespace std;
 //     return 0;
 //   }
 
-  // SECTION - 09 :
   // int main(){
   //   vector <int> vec{1,4,2,8,3};
   //   char alph;
@@ -813,7 +832,7 @@ using namespace std;
 
   //   // ## amazing concept 
   //   // if true : then all of statements will be displayed
-  //   // if flase: theen the last 2 statements
+  //   // if flase: then the last 2 statements
 
   // }
 
@@ -827,7 +846,8 @@ using namespace std;
   //   num--;
   // }
 
-//section 10 : string
+//section 10 : 
+// String
 
 //  C-STRING STYLE 
 // int main(){
@@ -927,31 +947,75 @@ using namespace std;
 
 //section -10 CHALLENGE QUE :
 // SUBSTITUTION CIPHER
-int main(){
-  string alphabet{"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
-  string key{"XHIDHASFASOAHASODHASOIDHASIOHIAOSSAODAHDAIODHIASDHIS"};
-  string secret_message{};
-  cout<<"enter your secret message: ";
+// int main(){
+//   string alphabet{"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+//   string key{"XHIDHASFASOAHASODHASOIDHASIOHIAOSSAODAHDAIODHIASDHIS"};
+//   string secret_message{};
+//   cout<<"enter your secret message: ";
 
-  getline(cin,secret_message);
+//   getline(cin,secret_message);
 
-  string encrypted_message{};
-  for(auto c: secret_message){
-    size_t position = alphabet.find(c);
-    cout<<position;
-    if(position !=string::npos){
-      char new_char {key.at(position)};
-      encrypted_message+=new_char;
-    }
-    else{
-      encrypted_message+=c;
-    }
-  }
-  cout<<encrypted_message;
-  return 0;
-}
+//   string encrypted_message{};
+//   for(auto c: secret_message){
+//     size_t position = alphabet.find(c);
+//     cout<<position;
+//     if(position !=string::npos){
+//       char new_char {key.at(position)};
+//       encrypted_message+=new_char;
+//     }
+//     else{
+//       encrypted_message+=c;
+//     }
+//   }
+//   cout<<encrypted_message;
+//   return 0;
+// }
+
+//ASSIGNMENT: SECTION-10(palindrome pyramid)
+// int main()
+// {
+//     string letters{};
+
+//     cout << "Enter a string of letters so I can create a Letter Pyramid from it: ";
+//     getline(cin, letters);
+
+//     size_t num_letters = letters.length();
+
+//     int position {0};
+
+//     // for each letter in the string
+//     for (char c: letters) {
+
+//         size_t num_spaces = num_letters - position;
+//         while (num_spaces > 0) {
+//             cout << " ";
+//             --num_spaces;
+//         }
+
+//         // Display in order up to the current character
+//         for (size_t j=0; j < position; j++) {
+//             cout << letters.at(j);
+//         }
+
+//         // Display the current 'center' character
+//         cout << c;
+
+//         // Display the remaining characters in reverse order
+//         for (int j=position-1; j >=0; --j) {
+//             // You can use this line to get rid of the size_t vs int warning if you want
+//             auto k = static_cast<size_t>(j);
+//             cout << letters.at(k);
+//         }
+
+//         cout << endl; // Don't forget the end line
+//         ++position;
+//     }
+
+//     return 0;
+// }
 
 // SECTION 11
+//FUNCTION 
 
 // WHAT IS FUNCTION
 // int main(){
@@ -1147,31 +1211,49 @@ int main(){
 // int main(){
 //   // 1)declaring pointers
 //   int * int_ptr;
-//   double*int_double;
+//   double*int_double;//garbage data
 
 //   // 2)initializing pointers
-//   double*double_ptr{nullptr};
+//   double*double_ptr{nullptr};//points to nowhere
 // }
 
-//accessing the pointer address nd storing address in a pointer 
+// accessing the pointer address nd storing address in a pointer 
 // int main(){
 //   int num{10};
 //   cout<<"value of num is : " <<num <<endl; // value
 //   cout<<"size of num is : "<<sizeof num<<endl;// shows bytes of int
-//   cout<<"address of num is : "<<&num<<endl;//garbage_address of num
+//   cout<<"address of num is : "<<&num<<endl;//address of num(hexadecimal no)
 
 //   int *p;
-//   cout<<"value of p is : " <<p <<endl; // garbage
+//   cout<<"value of p is : " <<p <<endl; // garbage(hexa)
 //   cout<<"size of p is : "<<sizeof p<<endl;// shows bytes of int
 //   cout<<"address of p is : "<<&p<<endl;//garbage_address of p
 
 //   p = nullptr;
 //   //nullptr = pointing nowhere!
-//   cout<<"num of p : "<<p<<endl;
+//   cout<<"value of p : "<<p<<endl;//0 notice the difference after nullptr
 // }
 
-//Dereferencing a pointer
-//ill - 01
+// // Dereferencing a pointer
+// ill-01:
+// int main(){
+//   int score{100};
+//   int *score_ptr{&score};
+
+//   cout<<score_ptr<<endl;//address milega coz we initialize it to &score
+//   cout<<*score_ptr<<endl;//dereferencing the pointer(DATA PHEKDIA)
+
+//   cout<<"\n";
+
+//   *score_ptr=200;//here we're not using pointer 
+//   // (look above at line 1208 this is how we use the pointer NO *)
+//   // that means we're accessing the data of pointer 
+//   cout<<score<<endl;
+//   cout<<score_ptr<<endl;
+//   cout<<*score_ptr;
+// }
+
+// ill - 02
 // int main(){
 //   string name{"frank"};
 //   string *string_ptr{&name};
@@ -1180,28 +1262,45 @@ int main(){
 //   cout<<string_ptr<<endl;
 // }
 
-// Dynamic memory allocation 
+//ill-03
+// int main(){
+//   vector <string>stooges {"larry","moe","curly"};
+//   vector <string> *vector_ptr{nullptr};
+
+//   vector_ptr= &stooges;
+
+//   cout<<(*vector_ptr).at(0)<<endl;
+//   //it is same as stooges.at(0)
+
+//   for(auto x:*vector_ptr){
+//     cout<<x<<endl;
+//   }
+// }
+
+// // Dynamic memory allocation 
 // ill-01:
+
 // int main(){
 //   size_t size{0};
 //   double *temp_ptr{nullptr};
 //   cout<<"how many temps ? ";
+//   cin>>size;
 //   temp_ptr = new double[size];
 //   cout<<temp_ptr<<endl;
 //   delete[]temp_ptr;//always use delete at alst to freeze 
 //   //allocated memory to prevent from MEMORY LEAK
 // }
 
-//Relationship bwtween arrays and pointers 
+// Relationship bwtween arrays and pointers 
 // int main(){
 //   // ill - 01:
-//   // int scores[]{100,95,90};
-//   // int *score_ptr{scores};//this is a pointer pointing towards scores !
+//   int scores[]{100,95,90};
+//   int *score_ptr{scores};//this is a pointer pointing towards scores !
 
-//   // //score_ptr can be interchangibly used with score 
-//   // cout<<score_ptr[0]<<endl;
-//   // cout<<score_ptr[1]<<endl;
-//   // cout<<score_ptr[2]<<endl;
+//   //score_ptr can be interchangibly used with score 
+//   cout<<score_ptr[0]<<endl;
+//   cout<<score_ptr[1]<<endl;
+//   cout<<score_ptr[2]<<endl;
 
 //   // ill-02:
 //   int scores[]{100,95,90};
@@ -1224,7 +1323,7 @@ int main(){
 // //array offset notation :
 // cout<<*scores<<endl; // 1000 allocated location
 // cout<<*(scores+1)<<endl;//(+1 = indicates 
-// // [1000 + 1(pointing to int scores wala int) 
+// // [1000 + 1(pointing to int scores wala int(4bytes)) 
 // // = manje 4 == 1004 allocated location])
 // cout<<*(scores+2)<<endl; //similiarly = 1008
 
@@ -1235,7 +1334,8 @@ int main(){
 // cout<<*(scores_ptr+2)<<endl;
 // }
 
-//pointers arithmetic
+// pointers arithmetic
+//ill-01
 // int main(){
 //   int scores[]{100,95,89,65,-1};
 //   int *score_ptr = scores;
@@ -1252,48 +1352,83 @@ int main(){
 //   }
 // }
 
-//passing pointers to function :
+//ill-02:
+// int main(){
+//   char name[]{"frank"};
+//   char *char_ptr1 {nullptr};
+//   char *char_ptr2 {nullptr};
+
+//   char_ptr1 = &name[0]; //F
+//   char_ptr2 =&name[3]; //n
+
+//   cout<<char_ptr1<<endl;
+//   cout<<char_ptr2<<endl;
+//   cout<<(char_ptr2-char_ptr1);
+// }
+
+// passing pointers to function :
 // ill - 01 :
-  // void swap(int *a , int *b){
-  //   int temp = *a;
-  //   *a=*b;
-  //   *b=temp;
-  // }
+//   void swap(int *a , int *b){
+//     int temp = *a;
+//     *a=*b;
+//     *b=temp;
+//   }
 
-  // int main(){
-  //   int x{100},y{300};
-  //   cout<<"x :"<<x<<endl;
-  //   cout<<"y :"<<y<<endl;
+//   int main(){
+//     int x{100},y{300};
+//     cout<<"x :"<<x<<endl;
+//     cout<<"y :"<<y<<endl;
 
-  //   swap(&x,&y);
+//     swap(&x,&y);
 
-  //   cout<<"x :"<<x<<endl;
-  //   cout<<"y :"<<y<<endl;
-  // }
+//     cout<<"x :"<<x<<endl;
+//     cout<<"y :"<<y<<endl;
+//   }
 
-  // ill - 02 :
-  // void display(vector <int> *vec){
-  //   for(auto str : *vec){
-  //     cout<<str<<" ";
-  //   }
-  // }
+//   ill - 02 :
+//   void display(vector <int> *vec){
+//     for(auto str : *vec){
+//       cout<<str<<" ";
+//     }
+//   }
   
-  // int main(){
-  //   vector <int> vec{100,28,373773};
-  //   display(&vec);
-  // }
+//   int main(){
+//     vector <int> vec{100,28,373773};
+//     display(&vec);
+//   }
 
-  //ill - 03 : 
-  // void display(int *arr,int sentinel){
-  //   while(*arr!=sentinel){
-  //     cout<<* arr++<<" ";
-  //   }
-  // } 
-  // int main(){
-  //   int scores[]{100,282,373,929,-1};
-  //   display(scores,929);
-  // }
+//   ill - 03 : 
+//   void display(int *arr,int sentinel){
+//     while(*arr!=sentinel){
+//       cout<<* arr++<<" ";
+//     }
+//   } 
+//   int main(){
+//     int scores[]{100,282,373,929,-1};
+//     display(scores,929);
+//   }
 
+  //SECTION-13 
+  //OBJECT ORIENTED PROGRAMMING 
+
+// declaring class and objects
+// class player{
+//     //attributes
+//     string name;
+//     int health;
+//     int xp;
+
+//     // methods
+//     void talk(string);
+//     bool is_Dead();
+// };
+
+// int main(){
+//     player frank;
+//     player hero;
+
+//     return 0;
+// }
   //section - 20 : STL 
   // # 1/06/26
 

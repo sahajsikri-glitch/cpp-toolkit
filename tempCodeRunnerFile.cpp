@@ -1,4 +1,17 @@
 
-  // cin>>full_name;//ERROR : not appropriate only take first string
-  // cout<<"your full name is"<<full_name<<endl;
-  // cout<<"----------------------------"<<endl;
+//     //attributes
+//     string name;
+//     int health;
+//     int xp;
+
+//     // methods
+//     void talk(string);
+//     bool is_Dead();
+// };
+
+// int main(){
+//     player frank;
+//     player hero;
+
+//     return 0;
+// }
