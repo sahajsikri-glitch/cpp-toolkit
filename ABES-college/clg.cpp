@@ -236,22 +236,69 @@ using namespace std;
 //   }
 
   //static function or variable
-  class abc{
-    static int fruitjuicer;
-    public:
-    static void show(){
-      cout<<"hello";
-    }
-  };
+  // class abc{
+  //   static int fruitjuicer;
+  //   public:
+  //   static void show(){
+  //     cout<<"hello";
+  //   }
+  // };
 
-  //best use case of static :
-  class help{
-    static int helper;
-    int a=10;//giving default values to 10 if using static
-    int b;
-    int c;
-  };
+  // //best use case of static :
+  // class help{
+  //   static int helper;
+  //   int a=10;//giving default values to 10 if using static
+  //   int b;
+  //   int c;
+  // };
+  // int main(){
+  //   help h1;//jo h1 hai agar usme ab hum a b c ki value de agar toh
+  //   //its static toh a ki value dene par bhi vo 10 hi rahegi
+  // }
+
+  //Q)wap to create two functions calc1 and calc2
+  // in calc1 - take 3 input from the user and check 
+  // whether it is even posititve no or not
+  // in clac2 function pass the value as a paramaeter 
+  // & find the sum of 2 smallest no.
+
+  void calc1(int a , int b , int c){
+    if(a%2==0){
+      cout<<"a is positive";
+    }
+    else{
+      cout<<"a is negative";
+    }
+
+    if(b%2==0){
+      cout<<"b is positive";
+    }
+    else{
+      cout<<"b is negative";
+    }
+
+    if(c%2==0){
+      cout<<"c is positive";
+    }
+    else{
+      cout<<"c is negative";
+    }
+  }
+
+  int clac2(int a,int b,int c){
+    if(a>b&&a>c){
+      return b+c;
+    }
+    else if(b>a && b>c){
+      return a+c;
+    }
+    else{
+      return a+b;
+    }
+  }
+
   int main(){
-    help h1;//jo h1 hai agar usme ab hum a b c ki value de agar toh
-    //its static toh a ki value dene par bhi vo 10 hi rahegi
+    calc1(1,2,3);
+    cout<<clac2(1,2,3);
+    return 0;
   }
