@@ -112,30 +112,30 @@ using namespace std;
 //   xyz::display();
 // }
 
-class student{
-  int id;
-  float cgpa;
-  char name[10];
-  char dept[5];
+// class student{
+//   int id;
+//   float cgpa;
+//   char name[10];
+//   char dept[5];
 
-  void get_Data(){
-    cout<<"enter your id: ";
-    cin>>id;
-    cout<<"enter your name: ";
-    cin>>name;
-    cout<<"enter your cgpa: ";
-    cin>>cgpa;
-    cout<<"enter your department: ";
-    cin>>dept;
-  }
+//   void get_Data(){
+//     cout<<"enter your id: ";
+//     cin>>id;
+//     cout<<"enter your name: ";
+//     cin>>name;
+//     cout<<"enter your cgpa: ";
+//     cin>>cgpa;
+//     cout<<"enter your department: ";
+//     cin>>dept;
+//   }
 
-  void display_data(){
-    cout<<id;
-    cout<<name;
-    cout<<cgpa;
-    cout<<dept;
-  }
-};
+//   void display_data(){
+//     cout<<id;
+//     cout<<name;
+//     cout<<cgpa;
+//     cout<<dept;
+//   }
+// };
 
 //Q) write a program to show 5 diff employee information as -: 
 // id name dept and monthly salary display each employee info as
@@ -193,3 +193,65 @@ class student{
 //   }
 //   return 0;
 // }
+
+// Q)wap to create 2 namespaces as fruit and rice
+// both has the function name as detail() and 
+// quantity available . call the quantity available function
+// from rice and detail function from fruit.
+
+// namespace fruits{
+//   int detail(int price,int quality){
+//     cout<<price;
+//     cout<<quality;
+//   }
+
+//   int quantity_available(int quantity){
+//     if(quantity>0){
+//       cout<<"quantity available";
+//     }
+//     else{
+//       cout<<"not available";
+//     }
+//   }
+// }
+// namespace rice{
+//   int detail(int price,int quality){
+//     cout<< price;
+//     cout<< quality;
+//   }
+
+//   int quantity_available(int quantity){
+//      if(quantity>0){
+//       cout<<"quantity available";
+//     }
+//     else{
+//       cout<<"not available";
+//     }
+//   }
+// }
+//   int main(){
+//     //use scope resolution to call function
+//     fruits::detail(2,4);
+//     rice::quantity_available(100);
+//   }
+
+  //static function or variable
+  class abc{
+    static int fruitjuicer;
+    public:
+    static void show(){
+      cout<<"hello";
+    }
+  };
+
+  //best use case of static :
+  class help{
+    static int helper;
+    int a=10;//giving default values to 10 if using static
+    int b;
+    int c;
+  };
+  int main(){
+    help h1;//jo h1 hai agar usme ab hum a b c ki value de agar toh
+    //its static toh a ki value dene par bhi vo 10 hi rahegi
+  }
