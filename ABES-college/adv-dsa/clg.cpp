@@ -206,3 +206,18 @@ int main(){
     cout<<"The evaluated value of given POSTFIX is "<<st.top();
     return 0;
 }
+
+//Dynamic implementaion of Queue :
+// struct Node{
+//     int info;
+//     Node *next;
+// };
+// Node *front =NULL;
+// Node *rear =NULL;
+
+// void enqueue(int val){
+//     Node *newNode =new Node();
+//     // newNode ->data =value;
+
+// }
+// void()

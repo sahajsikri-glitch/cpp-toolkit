@@ -4,28 +4,8 @@
 #include <cctype>//for character based functions
 #include <cstdlib>//required for rand()
 #include <ctime>//required for time()
+#include <stack>
 using namespace std;
-
-// // #26/02/26  
-
-// //in-class question : BUBBLE SORT
-// // int main(){
-// //   int a[5]{45,89,19,2,10};
-// //   int temp;
-// //   int n=5;
-// //   for(int i=0;i<n-1;i++){
-// //     for(int j=0;j-n-1;j++)
-// // {
-// //   if(a[j]>a[j+1]){
-// //     temp = a[j];
-// //     a[j]=a[j+1];
-// //     a[j+1]=temp;
-// //   }
-// // }  }
-// // for(int i = 0;i<n;i++){
-// //   cout<<"sorted array : "<<a[i];
-// // }
-// // }
 
 // // coding CODECHEF QUESTION : 
 // //problem - 01
@@ -262,43 +242,193 @@ using namespace std;
   // in clac2 function pass the value as a paramaeter 
   // & find the sum of 2 smallest no.
 
-  void calc1(int a , int b , int c){
-    if(a%2==0){
-      cout<<"a is positive";
-    }
-    else{
-      cout<<"a is negative";
+  // void calc1(int a , int b , int c){
+  //   if(a%2==0){
+  //     cout<<"a is positive";
+  //   }
+  //   else{
+  //     cout<<"a is negative";
+  //   }
+
+  //   if(b%2==0){
+  //     cout<<"b is positive";
+  //   }
+  //   else{
+  //     cout<<"b is negative";
+  //   }
+
+  //   if(c%2==0){
+  //     cout<<"c is positive";
+  //   }
+  //   else{
+  //     cout<<"c is negative";
+  //   }
+  // }
+
+  // int clac2(int a,int b,int c){
+  //   if(a>b&&a>c){
+  //     return b+c;
+  //   }
+  //   else if(b>a && b>c){
+  //     return a+c;
+  //   }
+  //   else{
+  //     return a+b;
+  //   }
+  // }
+
+  // int main(){
+  //   calc1(1,2,3);
+  //   cout<<clac2(1,2,3);
+  //   return 0;
+  // }
+
+//function overaloading :
+// same func name different parameters or 
+// same parameters with different orderes
+// add(int a,int b) add(float a,float b) add(int a ,float b)
+
+//Q) wap to show the concept of function overloading
+// by calculating the area of different shapes
+
+// Q) wap to show the concepot of func overloading for 
+// calculating the salary of employees as basic +hra + da 
+// and if hra and da not prvvided then assume their values as
+// 5000,2000 respectively
+
+// class salary{
+//   int basic,hra,da;
+//   void calculate(int a){
+//     basic =a;
+//     hra = 500;
+//     da=200;
+//     cout<<(basic+hra+da);
+//   }
+  
+//   void calculate(int a , int b){
+//     basic = a;
+//     hra=b;
+//     da=200;
+//     cout<<(basic+hra+da);
+//   }
+
+//   void calculate(int a , int b,int c){
+//     basic=a;
+//     hra=b;
+//     da=c;
+//     cout<<(basic+hra+da);
+//   }
+// };
+
+// int main(){
+//   salary s;
+//   int base,hra,da;
+//   cout<<"base";
+//   cin>>base;
+//   cout<<"hra";
+//   cin>>hra;
+//   cout<<"da";
+//   cin>>da;
+
+//   s.calculate(base,hra);
+//   s.calculate(base,hra,da);
+//   s.calculate(base);
+
+// }
+
+//Default-arguments
+// =>helps in minimizing fucntion overloading 
+
+//wap to calculate salary of base+10%hra+2%da.if no value is provide hra as 500 da as 150
+// int salary(int base,int hra=500,int da=150){
+//   hra/=10;
+//   da=(da*2)/100;
+//   return base+hra+da;
+// }
+// int main(){
+//   salary(5000);
+//   salary(500,40,80);
+// }
+
+//Q)wap to create airline reservation system 
+// which include the private data  as passanfer id nam ,
+// flight no , destination , ticket fair , booking status. 
+// including different public function as add passenger ,
+// display passenger detail , book ticket , cancel ticket .
+
+class reservation{
+  private:
+    int passengerID;
+    string passengerName;
+    int flightNo;
+    string destination;
+    float ticketFare;
+    bool bookingStatus;
+  public:
+    void addPasseneger(){
+      cout<<"add passenger id";
+      cin>>passengerID;
+      
+      cin.ignore();
+      cout<<"enter passenger name";
+      getline(cin,passengerName);
+
+      cout<<"flight number";
+      cin>>flightNo;
+
+      cin.ignore();
+      cout<<"enter destination";
+      getline(cin,destination);
+
+      cout<<"enter ticket fare";
+      cin>>ticketFare;
+
+      bookingStatus=false;
     }
 
-    if(b%2==0){
-      cout<<"b is positive";
-    }
-    else{
-      cout<<"b is negative";
+    void bookTicket(){
+      if(bookingStatus){
+        cout<<"ticket is already booked";
+      }
+      else{
+        bookingStatus=true;
+        cout<<"Ticket Booked Successfully";
+      }
     }
 
-    if(c%2==0){
-      cout<<"c is positive";
+    void cancelTicket(){
+      if(bookingStatus){
+        bookingStatus=false;
+        cout<<"Ticket cancelled Successfully";
+      }
+      else{
+        cout<<"not booked already";
+      }
     }
-    else{
-      cout<<"c is negative";
-    }
-  }
+    void displayPassenger(){
+      cout << "\n------- Passenger Details -------\n";
 
-  int clac2(int a,int b,int c){
-    if(a>b&&a>c){
-      return b+c;
+        cout << "Passenger ID : " << passengerID << endl;
+        cout << "Passenger Name : " << passengerName << endl;
+        cout << "Flight Number : " << flightNo << endl;
+        cout << "Destination : " << destination << endl;
+        cout << "Ticket Fare : " << ticketFare << endl;
+        if (bookingStatus)
+            cout << "Booking Status : Booked\n";
+        else
+            cout << "Booking Status : Not Booked\n";
     }
-    else if(b>a && b>c){
-      return a+c;
-    }
-    else{
-      return a+b;
-    }
-  }
+};
 
-  int main(){
-    calc1(1,2,3);
-    cout<<clac2(1,2,3);
+int main(){
+  reservation passenger;
+  passenger.addPasseneger();
+      passenger.bookTicket();
+    passenger.displayPassenger();
+
+    cout << "\nCancelling Ticket...\n";
+
+    passenger.cancelTicket();
+    passenger.displayPassenger();
     return 0;
-  }
+}
