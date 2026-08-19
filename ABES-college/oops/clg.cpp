@@ -356,79 +356,96 @@ using namespace std;
 // including different public function as add passenger ,
 // display passenger detail , book ticket , cancel ticket .
 
-class reservation{
-  private:
-    int passengerID;
-    string passengerName;
-    int flightNo;
-    string destination;
-    float ticketFare;
-    bool bookingStatus;
-  public:
-    void addPasseneger(){
-      cout<<"add passenger id";
-      cin>>passengerID;
+// class reservation{
+//   private:
+//     int passengerID;
+//     string passengerName;
+//     int flightNo;
+//     string destination;
+//     float ticketFare;
+//     bool bookingStatus;
+//   public:
+//     void addPasseneger(){
+//       cout<<"add passenger id";
+//       cin>>passengerID;
       
-      cin.ignore();
-      cout<<"enter passenger name";
-      getline(cin,passengerName);
+//       cin.ignore();
+//       cout<<"enter passenger name";
+//       getline(cin,passengerName);
 
-      cout<<"flight number";
-      cin>>flightNo;
+//       cout<<"flight number";
+//       cin>>flightNo;
 
-      cin.ignore();
-      cout<<"enter destination";
-      getline(cin,destination);
+//       cin.ignore();
+//       cout<<"enter destination";
+//       getline(cin,destination);
 
-      cout<<"enter ticket fare";
-      cin>>ticketFare;
+//       cout<<"enter ticket fare";
+//       cin>>ticketFare;
 
-      bookingStatus=false;
+//       bookingStatus=false;
+//     }
+
+//     void bookTicket(){
+//       if(bookingStatus){
+//         cout<<"ticket is already booked";
+//       }
+//       else{
+//         bookingStatus=true;
+//         cout<<"Ticket Booked Successfully";
+//       }
+//     }
+
+//     void cancelTicket(){
+//       if(bookingStatus){
+//         bookingStatus=false;
+//         cout<<"Ticket cancelled Successfully";
+//       }
+//       else{
+//         cout<<"not booked already";
+//       }
+//     }
+//     void displayPassenger(){
+//       cout << "\n------- Passenger Details -------\n";
+
+//         cout << "Passenger ID : " << passengerID << endl;
+//         cout << "Passenger Name : " << passengerName << endl;
+//         cout << "Flight Number : " << flightNo << endl;
+//         cout << "Destination : " << destination << endl;
+//         cout << "Ticket Fare : " << ticketFare << endl;
+//         if (bookingStatus)
+//             cout << "Booking Status : Booked\n";
+//         else
+//             cout << "Booking Status : Not Booked\n";
+//     }
+// };
+
+// int main(){
+//   reservation passenger;
+//   passenger.addPasseneger();
+//       passenger.bookTicket();
+//     passenger.displayPassenger();
+
+//     cout << "\nCancelling Ticket...\n";
+
+//     passenger.cancelTicket();
+//     passenger.displayPassenger();
+//     return 0;
+// }
+//Access specifier :
+class rectangle {
+    private : int a, b;
+    public:
+    void setDimensions(int length,int breadth){
+        a = length;
+        b = breadth;
     }
-
-    void bookTicket(){
-      if(bookingStatus){
-        cout<<"ticket is already booked";
-      }
-      else{
-        bookingStatus=true;
-        cout<<"Ticket Booked Successfully";
-      }
-    }
-
-    void cancelTicket(){
-      if(bookingStatus){
-        bookingStatus=false;
-        cout<<"Ticket cancelled Successfully";
-      }
-      else{
-        cout<<"not booked already";
-      }
-    }
-    void displayPassenger(){
-      cout << "\n------- Passenger Details -------\n";
-
-        cout << "Passenger ID : " << passengerID << endl;
-        cout << "Passenger Name : " << passengerName << endl;
-        cout << "Flight Number : " << flightNo << endl;
-        cout << "Destination : " << destination << endl;
-        cout << "Ticket Fare : " << ticketFare << endl;
-        if (bookingStatus)
-            cout << "Booking Status : Booked\n";
-        else
-            cout << "Booking Status : Not Booked\n";
+    void displayArea(){
+        cout<<a*b;
     }
 };
-
 int main(){
-  reservation passenger;
-  passenger.addPasseneger();
-      passenger.bookTicket();
-    passenger.displayPassenger();
-
-    cout << "\nCancelling Ticket...\n";
-
-    passenger.cancelTicket();
-    passenger.displayPassenger();
-    return 0;
+    rectangle r;
+    r.setDimensions(3,4);
+    r.displayArea();
 }
