@@ -433,19 +433,44 @@ using namespace std;
 //     return 0;
 // }
 //Access specifier :
-class rectangle {
-    private : int a, b;
+// class rectangle {
+//     private : int a, b;
+//     public:
+//     void setDimensions(int length,int breadth){
+//         a = length;
+//         b = breadth;
+//     }
+//     void displayArea(){
+//         cout<<a*b;
+//     }
+// };
+// int main(){
+//     rectangle r;
+//     r.setDimensions(3,4);
+//     r.displayArea();
+// }
+
+// 31/08/2026
+//design a class to represent a bank account with proper data hiding 
+// and member function to deposit and withdrawl operations
+class bankAccount{
+    private:
+        int balance;
     public:
-    void setDimensions(int length,int breadth){
-        a = length;
-        b = breadth;
-    }
-    void displayArea(){
-        cout<<a*b;
-    }
+        void deposit(int amount){
+            balance = balance+amount;
+        }
+        void withdrawl(int amount){
+            if(balance<amount){
+                cout<<"Insufficient balance";
+            }
+            else{
+                cout<<"balance = "<<balance;
+            }
+        }
 };
 int main(){
-    rectangle r;
-    r.setDimensions(3,4);
-    r.displayArea();
+    bankAccount b;
+    b.deposit(5000);
+    b.withdrawl(400000);
 }

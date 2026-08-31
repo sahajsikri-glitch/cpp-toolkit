@@ -170,42 +170,42 @@ using namespace std;
 
 
 //evaluation of prefix expression
-int main(){
-    stack<int> st;
-    string s="";
-    cout<<"Enter the Postfix";
-    getline(cin,s);
-    reverse(s.begin(),s.end());
-    for(char ch:s){
-        if(isdigit(ch)){
-            st.push(ch-'0');
-        }
-        else{
-            int a=st.top();
-            st.pop();
-            int b=st.top();
-            st.pop();
-            int r;
-            switch(ch){
-                case '+':r=a+b;
-                    break;
-                case '-':r=a-b;
-                    break;
-                case '*':r=a*b;
-                    break;
-                case '/':r=a/b;
-                    break;
-                case '^':r=pow(a,b);
-                    break;
+// int main(){
+//     stack<int> st;
+//     string s="";
+//     cout<<"Enter the Postfix";
+//     getline(cin,s);
+//     reverse(s.begin(),s.end());
+//     for(char ch:s){
+//         if(isdigit(ch)){
+//             st.push(ch-'0');
+//         }
+//         else{
+//             int a=st.top();
+//             st.pop();
+//             int b=st.top();
+//             st.pop();
+//             int r;
+//             switch(ch){
+//                 case '+':r=a+b;
+//                     break;
+//                 case '-':r=a-b;
+//                     break;
+//                 case '*':r=a*b;
+//                     break;
+//                 case '/':r=a/b;
+//                     break;
+//                 case '^':r=pow(a,b);
+//                     break;
 
-            }
-            st.push(r);
+//             }
+//             st.push(r);
 
-        }
-    }
-    cout<<"The evaluated value of given POSTFIX is "<<st.top();
-    return 0;
-}
+//         }
+//     }
+//     cout<<"The evaluated value of given POSTFIX is "<<st.top();
+//     return 0;
+// }
 
 //Dynamic implementaion of Queue :
 // struct Node{
@@ -220,4 +220,3 @@ int main(){
 //     // newNode ->data =value;
 
 // }
-// void()
