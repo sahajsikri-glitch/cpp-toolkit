@@ -453,24 +453,69 @@ using namespace std;
 // 31/08/2026
 //design a class to represent a bank account with proper data hiding 
 // and member function to deposit and withdrawl operations
-class bankAccount{
-    private:
-        int balance;
-    public:
-        void deposit(int amount){
-            balance = balance+amount;
-        }
-        void withdrawl(int amount){
-            if(balance<amount){
-                cout<<"Insufficient balance";
-            }
-            else{
-                cout<<"balance = "<<balance;
-            }
-        }
+// class bankAccount{
+//     private:
+//         int balance;
+//     public:
+//         void deposit(int amount){
+//             balance = balance+amount;
+//         }
+//         void withdrawl(int amount){
+//             if(balance<amount){
+//                 cout<<"Insufficient balance";
+//             }
+//             else{
+//                 cout<<"balance = "<<balance;
+//             }
+//         }
+// };
+// int main(){
+//     bankAccount b;
+//     b.deposit(5000);
+//     b.withdrawl(400000);
+// }
+
+// Q) develop a program to demonstrate different type of constructor and 
+// deconstructor behavior in object lifecycle management 
+class Student {
+    int rollNo;
+    string name;
+
+public:
+    Student() {
+        rollNo = 0;
+        name = "Sahaj";
+        cout << "Default Constructor called" << endl;
+    }
+    Student(int r, string n) {
+        rollNo = r;
+        name = n;
+        cout << "Parameterized Constructor called" << endl;
+    }
+    Student(const Student &s) {
+        rollNo = s.rollNo;
+        name = s.name;
+        cout << "Copy Constructor called" << endl;
+    }
+    void display() {
+        cout << "Roll No: " << rollNo << endl;
+        cout << "Name: " << name << endl;
+    }
 };
-int main(){
-    bankAccount b;
-    b.deposit(5000);
-    b.withdrawl(400000);
+
+int main() {
+    cout << "Creating object using Default Constructor:" << endl;
+    Student s1;
+    s1.display();
+
+    cout << "\nCreating object using Parameterized Constructor:" << endl;
+    Student s2(101, "Rahul");
+    s2.display();
+
+    cout << "\nCreating object using Copy Constructor:" << endl;
+    Student s3 = s2;
+    s3.display();
+
+    cout << "\nEnd of main()" << endl;
+    return 0;
 }

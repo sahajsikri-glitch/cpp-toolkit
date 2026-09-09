@@ -220,3 +220,20 @@ using namespace std;
 //     // newNode ->data =value;
 
 // }
+
+//Dynamic implementation of MAX priority Queue :
+struct Node{
+  int info;
+  Node *next;
+};
+Node *front = NULL;
+void insert(int x){
+  Node *newNode = new Node();
+  newNode-> info =x;
+  newNode-> next = front;
+  front = newNode;
+}
+
+void delete(){
+  
+}
