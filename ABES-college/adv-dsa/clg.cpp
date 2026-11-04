@@ -222,18 +222,146 @@ using namespace std;
 // }
 
 //Dynamic implementation of MAX priority Queue :
-struct Node{
-  int info;
-  Node *next;
+// struct Node{
+//   int info;
+//   Node *next;
+// };
+// Node *front = NULL;
+// void insert(int x){
+//   Node *newNode = new Node();
+//   newNode-> info =x;
+//   newNode-> next = front;
+//   front = newNode;
+// }
+
+// BINARY TREE :
+struct Node
+{
+    int info;
+    Node *left;
+    Node *right;
 };
-Node *front = NULL;
-void insert(int x){
-  Node *newNode = new Node();
-  newNode-> info =x;
-  newNode-> next = front;
-  front = newNode;
+// create 
+Node *create()
+{
+    int x;
+    cout << "Enter -1 for no data: ";
+    cin >> x;
+    if (x == -1)
+        return NULL;
+    else
+    {
+        Node *p = new Node();
+        p->info = x;
+
+        cout << "Enter left child of " << x << endl;
+        p->left = create();
+
+        cout << "Enter right child of " << x << endl;
+        p->right = create();
+        return p;
+    }
+}
+// preorder 
+void preorder(Node *root)
+{
+    if (root == NULL)
+        return;
+    cout << root->info << " ";
+    preorder(root->left);
+    preorder(root->right);
+}
+// inorder 
+void inorder(Node *root)
+{
+    if (root == NULL)
+        return;
+    inorder(root->left);
+    cout << root->info << " ";
+    inorder(root->right);
+}
+// postorder
+void postorder(Node *root)
+{
+    if (root == NULL)
+        return;
+    postorder(root->left);
+    postorder(root->right);
+    cout << root->info << " ";
+}
+// count leafNode
+int leafnode_count(Node *root)
+{
+    if (root == NULL)
+        return 0;
+    if (root->left == NULL && root->right == NULL)
+        return 1;
+    return leafnode_count(root->left) + leafnode_count(root->right);
+}
+// count internalNode
+int internalnode_count(Node *root)
+{
+    if (root == NULL || (root->left == NULL && root->right == NULL))
+    {
+        return 0;
+    }
+    return 1 + internalnode_count(root->left) + internalnode_count(root->right);
+}
+// count total
+int totalcount(Node *p)
+{
+    if (p == NULL)
+        return 0;
+    else
+        return (1 + totalcount(p->left) + totalcount(p->right));
+}
+// count single child
+int countSingleChild(Node *p)
+{
+    if (p == NULL)
+        return 0;
+
+    int count = 0;
+    if ((p->left == NULL && p->right != NULL) || (p->left != NULL && p->right == NULL))
+        count++;
+    return count + countSingleChild(p->left) + countSingleChild(p->right);
+}
+// count 2 child
+int countTwoChild(Node *p)
+{
+    if (p == NULL)
+        return 0;
+
+    int count = 0;
+    if (p->left != NULL && p->right != NULL)
+        count++;
+    return count + countTwoChild(p->left) + countTwoChild(p->right);
 }
 
-void delete(){
-  
+int height(Node* p)
+{
+    if(p==NULL)
+        return 0;
+
+    return 1+max(height(p->left),height(p->right));
+}
+
+int main()
+{
+    Node *root = create();
+    cout<<endl;
+    preorder(root);
+    cout << endl;
+    inorder(root);
+    cout << endl;
+    postorder(root);
+    cout << endl;
+    cout << leafnode_count(root) << endl;
+    cout << internalnode_count(root) << endl;
+    cout << totalcount(root) << endl;
+    cout << countSingleChild(root) << endl;
+    cout << countTwoChild(root) << endl;
+    cout << height(root) << endl;
+
+    return 0;
 }
