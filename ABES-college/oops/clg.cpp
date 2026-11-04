@@ -477,45 +477,125 @@ using namespace std;
 
 // Q) develop a program to demonstrate different type of constructor and 
 // deconstructor behavior in object lifecycle management 
-class Student {
-    int rollNo;
-    string name;
+// class Student {
+//     int rollNo;
+//     string name;
 
+// public:
+//     Student() {
+//         rollNo = 0;
+//         name = "Sahaj";
+//         cout << "Default Constructor called" << endl;
+//     }
+//     Student(int r, string n) {
+//         rollNo = r;
+//         name = n;
+//         cout << "Parameterized Constructor called" << endl;
+//     }
+//     Student(const Student &s) {
+//         rollNo = s.rollNo;
+//         name = s.name;
+//         cout << "Copy Constructor called" << endl;
+//     }
+//     void display() {
+//         cout << "Roll No: " << rollNo << endl;
+//         cout << "Name: " << name << endl;
+//     }
+// };
+
+// int main() {
+//     cout << "Creating object using Default Constructor:" << endl;
+//     Student s1;
+//     s1.display();
+
+//     cout << "\nCreating object using Parameterized Constructor:" << endl;
+//     Student s2(101, "Rahul");
+//     s2.display();
+
+//     cout << "\nCreating object using Copy Constructor:" << endl;
+//     Student s3 = s2;
+//     s3.display();
+
+//     cout << "\nEnd of main()" << endl;
+//     return 0;
+// }
+
+// Q)a software company wants tro develop a student info system where student details
+// must remain protected from unauthourized modification . Desiggn a suitable class
+// heriarchy demonstrating data hiding , controlled access to the data members , and
+// member function defined outside the class . justify your design choices and implement 
+// atletast one member function as an inline fucntion outside the class defination
+class Node{
+    public:
+    int data;
+    Node *next;
+    Node(int val){
+        this->data = val;
+        this->next=nullptr;
+    }
+};
+int main(){
+    Node *frist =new Node(10);
+    frist->next = new Node(20);
+
+    // display 
+    while(frist){
+        cout<<frist->data;
+        if('->'){
+            cout<<"->";
+        }
+        frist=frist->next;
+    }
+}
+
+// EXAMPLE of function overloading & functions overriding
+// 1)Function Overloading
+class Calculator {
 public:
-    Student() {
-        rollNo = 0;
-        name = "Sahaj";
-        cout << "Default Constructor called" << endl;
+    int add(int a, int b) {
+        return a + b;
     }
-    Student(int r, string n) {
-        rollNo = r;
-        name = n;
-        cout << "Parameterized Constructor called" << endl;
+
+    int add(int a, int b, int c) {
+        return a + b + c;
     }
-    Student(const Student &s) {
-        rollNo = s.rollNo;
-        name = s.name;
-        cout << "Copy Constructor called" << endl;
-    }
-    void display() {
-        cout << "Roll No: " << rollNo << endl;
-        cout << "Name: " << name << endl;
+
+    double add(double a, double b) {
+        return a + b;
     }
 };
 
 int main() {
-    cout << "Creating object using Default Constructor:" << endl;
-    Student s1;
-    s1.display();
+    Calculator obj;
 
-    cout << "\nCreating object using Parameterized Constructor:" << endl;
-    Student s2(101, "Rahul");
-    s2.display();
+    cout << obj.add(10, 20) << endl;
+    cout << obj.add(10, 20, 30) << endl;
+    cout << obj.add(10.5, 20.5) << endl;
 
-    cout << "\nCreating object using Copy Constructor:" << endl;
-    Student s3 = s2;
-    s3.display();
-
-    cout << "\nEnd of main()" << endl;
     return 0;
 }
+
+// 2)Function Overriding
+// class Animal {
+// public:
+//     virtual void sound() {
+//         cout << "Animal makes a sound" << endl;
+//     }
+// };
+
+// class Dog : public Animal {
+// public:
+//     void sound() override {
+//         cout << "Dog barks" << endl;
+//     }
+// };
+
+// int main() {
+//     Animal* ptr;
+//     Dog d;
+
+//     ptr = &d;
+//     ptr->sound();
+
+//     return 0;
+// }
